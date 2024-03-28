@@ -1,0 +1,21 @@
+<h1>Productos</h1>
+
+
+<div>
+    <ul>
+        @for (item of dataOnline; track item.id) {
+            <li> {{ item.id }}</li>
+            <p>Nombre: {{ item.name }}</p>
+            <p>Nombre de usuario: {{ item.username }}</p>
+            <p>Correo electrónico: {{ item.email }}</p>
+            <p>Dirección: {{ item.address.street }}, {{ item.address.suite }}, {{ item.address.city }}, {{ item.address.zipcode }}</p>
+            <p>Teléfono: {{ item.phone }}</p>
+            <p>Sitio web: {{ item.website }}</p>
+            <p>Compañía: {{ item.company.name }}</p>
+            <p>Frases destacadas: {{ item.company.catchPhrase }}, {{ item.company.bs }}</p>
+        
+            } @empty {
+            <p>cargando...</p>
+            }
+    </ul>
+</div>

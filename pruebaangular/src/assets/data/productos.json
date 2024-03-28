@@ -1,0 +1,16 @@
+{"nombre": "Congreso",
+"cantidadMaxima": "10",
+"fechaCreacion": "05-10-1023",
+"Fotos":[
+{
+"nombreArchivo":"img1.jpg",
+"tamaño":"1200",
+"descripcion":"Presentación de disertantes",
+"personasEnFoto":["Jose","Emanuel","Maria"]},
+{
+"nombreArchivo":"img2.jpg",
+"tamaño":"1800",
+"descripcion":"Presentación Experiencia",
+"personasEnFoto":["IA","Pedro"]}
+]
+}
