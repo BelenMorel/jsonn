@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClient} from '@angular/common/http';
 import { InfopageService } from '../../servicio/infopage.service';
 
 
@@ -11,22 +10,30 @@ import { InfopageService } from '../../servicio/infopage.service';
   standalone: true,
   imports: [
     CommonModule,
-
-    
-  ],
+    ],
   templateUrl: './novedades.component.html',
   styleUrl: './novedades.component.css'
 })
 export class NovedadesComponent implements OnInit {
 
-  datas: any[] = []; // Array para almacenar los datos
+  dataLocal: any[] = []; // datos del json
+  alumnos: any[] = []; // Array para almacenar los datos
 
-  constructor(private dataService: InfopageService) {}
+  constructor(private infopageService: InfopageService) {}
 
-  ngOnInit() {
-    this.dataService.fetchData().subscribe(data => {
-      // Asignar los datos al array datas
-      this.datas = data;
+  mostrarenconsola(){
+    console.log(this.alumnos)
+    console.log(this.dataLocal)
+  }
+
+  
+  ngOnInit(): void {
+    this.alumnos = this.infopageService.getAlumno(); // Obtiene el array alumno desde el servicio
+    this.infopageService.fetchdatajson(); // Llamada al método para recuperar los datos
+
+    // Suscríbete a dataOnline y maneja los datos recibidos
+    this.infopageService.dataOnline.subscribe((data: any[]) => {
+      this.dataLocal = data;
     });
   }
 }

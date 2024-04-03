@@ -1,32 +1,49 @@
 <h1>novedades</h1>
-<!--
-<div>
-    <ul>
-        @for (items of datas; track items.id) {
-            <h2>{{ items.nombre }}</h2>
-            <p>Cantidad Máxima: {{ items.cantidadMaxima }}</p>
-            <p>Fecha de Creación: {{ items.fechaCreacion }}</p>}
-             @empty {
-            <p>cargando...</p>
-            }
-    </ul>
-</div>
 
 
-<div>
-    <ul>
-        @for (item of dataLocal; track item.id) {
-            <h2>{{ dataLocal.nombre }}</h2>
-            <p>Cantidad Máxima: {{ dataLocal.cantidadMaxima }}</p>
-            <p>Fecha de Creación: {{ dataLocal.fechaCreacion }}</p>
-            @for (items of dataLocal.Fotos; track items.id) {
-                <h4>{{ foto.descripcion }}</h4>
-                <p>Nombre de Archivo: {{ foto.nombreArchivo }}</p>
-                <p>Tamaño: {{ foto.tamaño }}</p>
-                <p>Personas en la Foto: {{ foto.personasEnFoto.join(', ') }}</p>
-                <hr>
+
+<div class="container ">
+    <div class="row">
+        @for (alumno of alumnos; track alumno.id){
+            <div class="card card-body col-2 m-2 text-center">
+            <h2>id: {{ alumno.id }}</h2>
+            <p>nombre: {{ alumno.nombre }}</p>
+            <p>apellido: {{ alumno.apellido }}</p>
+            <p>edad: {{ alumno.edad }}</p>
+            </div>
             } @empty {
             <p>cargando...</p>
             }
-    </ul>
-</div>-->
+    </div>
+</div>
+
+<div class="container ">
+    <div class="row">
+            <div class="text-center">
+                <button (click)="mostrarenconsola()" class="btn btn-primary">Click</button>
+            </div>
+    </div>
+</div>
+
+
+<div class="container ">
+    <div class="row">
+        @for (datos of dataLocal; track datos.id){
+        <div class="card card-body col-2 m-2 text-center">
+            <p>Nombre: {{ datos.nombre }}</p>
+            <p>Cantidad Máxima: {{ datos.cantidadMaxima }}</p>
+            <p>Fecha de Creación: {{ datos.fechaCreacion }}</p>
+            @for (foto of datos.Fotos; track foto.id){
+                    <div>
+                        <p>Nombre Archivo: {{ foto.nombreArchivo }}</p>
+                        <p>Tamaño: {{ foto.tamano }}</p>
+                        <p>Descripción: {{ foto.descripcion }}</p>
+                        <p>Personas en la Foto: {{ foto.personasEnFoto.join(', ') }}</p>
+                    </div>
+            }
+
+        </div>  }  @empty {
+            <p>cargando...</p>
+            }
+    </div>
+</div>

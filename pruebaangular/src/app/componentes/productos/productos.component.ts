@@ -15,7 +15,6 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 })
 export class ProductosComponent {
 
-    private apiUrl = 'https://jsonplaceholder.typicode.com/users';
     private http = inject(HttpClient);
 
     dataOnline: any[] = []; // Datos del JSON en línea
@@ -26,7 +25,7 @@ export class ProductosComponent {
     }
     // JSON en línea
     fetchOnlineData() {
-      this.http.get(this.apiUrl).subscribe((res) => {
+      this.http.get('https://jsonplaceholder.typicode.com/users').subscribe((res) => {
         this.dataOnline = res as any[];
       });
     }
