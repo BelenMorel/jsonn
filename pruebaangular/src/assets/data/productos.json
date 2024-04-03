@@ -4,13 +4,13 @@
     "Fotos": [
       {
         "nombreArchivo": "img1.jpg",
-        "tamaño": "1200",
+        "tamano": "1200",
         "descripcion": "Presentación de disertantes",
         "personasEnFoto": ["Jose", "Emanuel", "Maria"]
       },
       {
         "nombreArchivo": "img2.jpg",
-        "tamaño": "1800",
+        "tamano": "1800",
         "descripcion": "Presentación Experiencia",
         "personasEnFoto": ["IA", "Pedro"]
       }
@@ -21,13 +21,13 @@
     "Fotos": [
       {
         "nombreArchivo": "img1.jpg",
-        "tamaño": "1200",
+        "tamano": "1200",
         "descripcion": "Presentación de cursos",
         "personasEnFoto": ["Juan", "Manuel", "Juliana"]
       },
       {
         "nombreArchivo": "img2.jpg",
-        "tamaño": "1800",
+        "tamano": "1800",
         "descripcion": "Presentación Maestros",
         "personasEnFoto": ["Paula", "Gisela"]
       }

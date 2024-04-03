@@ -1,9 +1,12 @@
 <h1>Productos</h1>
 
 
-<div>
-    <ul>
+<div class="container ">
+    <div class="row">
+    
         @for (user of dataOnline; track user.id) {
+            <div class="card card-body col-4 m-2 text-center">
+
             <h2>{{ user.name }}</h2>
             <p>Username: {{ user.username }}</p>
             <p>Email: {{ user.email }}</p>
@@ -11,8 +14,9 @@
             <p>Phone: {{ user.phone }}</p>
             <p>Website: <a href="{{ user.website }}" target="_blank">{{ user.website }}</a></p>
             <p>Company: {{ user.company.name }} - {{ user.company.catchPhrase }} - {{ user.company.bs }}</p>
+            </div>
             } @empty {
             <p>cargando datos...</p>
             }
-    </ul>
+    </div>
 </div>

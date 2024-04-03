@@ -20,7 +20,7 @@
 <div class="container ">
     <div class="row">
             <div class="text-center">
-                <button (click)="mostrarenconsola()" class="btn btn-primary">Click</button>
+                <button (click)="mostrarenconsola()" class="btn btn-primary">Ver en consola</button>
             </div>
     </div>
 </div>
@@ -34,7 +34,7 @@
             <p>Cantidad Máxima: {{ datos.cantidadMaxima }}</p>
             <p>Fecha de Creación: {{ datos.fechaCreacion }}</p>
             @for (foto of datos.Fotos; track foto.id){
-                    <div>
+                    <div class="card card-body mb-2 text-center">
                         <p>Nombre Archivo: {{ foto.nombreArchivo }}</p>
                         <p>Tamaño: {{ foto.tamano }}</p>
                         <p>Descripción: {{ foto.descripcion }}</p>
