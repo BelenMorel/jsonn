@@ -12,6 +12,7 @@ import { InicioComponent } from './componentes/inicio/inicio.component';
 import { NovedadesComponent } from './componentes/novedades/novedades.component';
 import { PiepaginaComponent } from './componentes/piepagina/piepagina.component';
 import { ProductosComponent } from './componentes/productos/productos.component';
+import { ContFirebaseComponent } from './componentes/cont-firebase/cont-firebase.component';
 
 @Component({
   selector: 'app-root',
@@ -26,6 +27,7 @@ import { ProductosComponent } from './componentes/productos/productos.component'
   HttpClientModule,
   ProductosComponent,
   FormsModule,
+  ContFirebaseComponent
   
   
   
